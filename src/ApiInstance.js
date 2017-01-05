@@ -1,12 +1,12 @@
 const WsRpc = require("./WebSocketRpc");
 const SteemApi = require("./SteemApi");
 
-const defaultOptions = {
+var defaultOptions = {
     url: "wss://node.steem.ws",
     user: "",
     pass: "",
     debug: false,
-    apis: ["database_api", "network_broadcast_api"]
+    apis: ["database_api", "network_broadcast_api", "follow_api", "market_history_api", "login_api", "private_message_api"]
 };
 
 var apiInstance;

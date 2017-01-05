@@ -17,6 +17,8 @@ class SteemApi {
 			console.error("SteemApi error:", method, params, JSON.stringify(error));
 			var newErr = new Error("SteemApi error:" + method + params + JSON.stringify(error));
 			newErr.original = error;
+			localStorage.error = 1;
+			localStorage.errormessage = error.message?error.message.split("\n")[1]:"Connection Error!";
 			throw newErr;
 		})
 	}
